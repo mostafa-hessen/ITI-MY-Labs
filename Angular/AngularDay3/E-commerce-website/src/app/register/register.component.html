@@ -1,0 +1,76 @@
+<form [formGroup]="reactivform" (ngSubmit)="submitFunc()" action="">
+    <div class="mb-3 mt-4">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
+            name="email" formControlName="email" />
+        <div *ngIf="formControls['email'].touched && formControls['email'].invalid"
+            class="mt-2 text-capitalize text-danger">
+
+            <span *ngIf="formControls['email'].errors?.['required']">this field is required</span>
+            <span *ngIf=" formControls['email'].errors?.['minlength']">minlength is 3</span>
+        </div>
+    </div>
+
+
+    <div class="mb-3 mt-4">
+        <label for="exampleFormControlInput2" class="form-label">Name</label>
+        <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Enter Your Name"
+            name="name" />
+        <!-- <div  *ngIf="title.touched&&title.invalid" class="mt-2 text-capitalize text-danger">
+            <span *ngIf="title.errors?.['required']">this field is required</span>
+            <span *ngIf="title.errors?.['minlength']">minlength is 4</span>
+        </div> -->
+    </div>
+
+
+    <div class="mb-3 mt-4">
+        <label for="exampleFormControlInput3" class="form-label">user name</label>
+        <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="enter  user name"
+            name="username" formControlName="username" />
+        <div *ngIf="formControls['username'].touched && formControls['username'].invalid"
+            class="mt-2 text-capitalize text-danger">
+            <span *ngIf="formControls['username'].errors?.['required']">this field is required</span> <br>
+            <span class="m-1" *ngIf="formControls['username'].errors?.['minlength']">minlength is 3</span>
+            <span *ngIf="formControls['username'].errors?.['pattern']">string only not space</span>
+        </div>
+    </div>
+
+    <div class="mb-3 mt-4">
+        <label for=" " id="exampleFormControlPassword" class="form-label">password</label>
+        <input type="password" required class="form-control" id="exampleFormControlPassword" name="password"
+            formControlName="password" placeholder="enter password" />
+        <div *ngIf="formControls['password'].touched && formControls['password'].invalid"
+            class="mt-2 text-capitalize text-danger">
+            <span *ngIf="formControls['password'].errors?.['password']">this field is required</span> <br>
+            <span class="m-1" *ngIf="formControls['password'].errors?.['minlength']">minlength is 8</span>
+            <span *ngIf="formControls['password'].errors?.['pattern']"> contains at least one
+                lowercase , one uppercase , at least one digit
+                and special characte</span>
+        </div>
+    </div>
+
+    <div class="mb-3 mt-4">
+        <label for=" " id="exampleFormControlConfirmPasswordC" class="form-label">confirm password</label>
+        <input type="password" required class="form-control" id="exampleFormControlPasswordC" name="password"
+            placeholder="confirm password"
+            formControlName="confirmpassword" />
+            <div *ngIf="formControls['confirmpassword'].touched && formControls['confirmpassword'].invalid"
+            class="mt-2 text-capitalize text-danger">
+            <span *ngIf="formControls['password'].errors?.['confirmpassword']">this field is required</span> <br>
+            <span class="m-1" *ngIf="formControls['confirmpassword'].errors?.['minlength']">minlength is 8</span>
+            <span *ngIf="formControls['confirmpassword'].errors?.['pattern']"> contains at least one
+                lowercase , one uppercase , at least one digit
+                and special characte</span>
+        </div>
+
+        <div>
+            <div *ngIf="reactivform.errors?.['valuesDontMatches']">im sad</div>
+        </div>
+    </div>
+
+    <button class="btn btn-danger mt-3">confirm</button>
+
+    <div class="mt-3">
+        <p class="text-capitalize">you already have account <a  routerLink="/login" style="color:tomato">login</a></p>
+    </div>
+</form>

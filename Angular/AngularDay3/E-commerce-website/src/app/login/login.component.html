@@ -1,0 +1,48 @@
+<form  #loginFormRef="ngForm" (ngSubmit)="login(loginFormRef)"  action="">
+  <div class="mb-3 mt-5">
+    <label for="exampleFormControlInput1" class="form-label"
+      >Email address</label
+    >
+    <input
+      required
+      minlength="4"
+      type="email"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="name@example.com"
+      name="email"
+      ngModel
+      #title="ngModel"
+    />
+    <div  *ngIf="title.touched&&title.invalid" class="mt-2 text-capitalize text-danger">
+        <span *ngIf="title.errors?.['required']">this field is required</span>
+        <span *ngIf="title.errors?.['minlength']">minlength is 4</span>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for=" "     id="exampleFormControlPassword"
+ class="form-label"
+      >password</label
+    >
+    <input
+    type="password"
+      required
+      class="form-control"
+      id="exampleFormControlPassword"
+      placeholder="enter password"
+      name="password"
+      #password="ngModel"
+      ngModel
+     
+
+   />
+    <div  *ngIf="password.touched && password.invalid" class="mt-2 text-capitalize text-danger">
+        <span *ngIf="password.errors?.['required']">this field is required</span>
+        <span *ngIf="password.errors?.['minlength']">minlength is 10</span>
+    </div>
+    <button class="btn btn-danger mt-3" [disabled]="loginFormRef.invalid">confirm</button>
+
+
+    <div class="mt-3"><p class="text-capitalize">you don't have account <a routerLink="/register"  style="color:tomato">register</a></p></div>
+  </div>
+</form>

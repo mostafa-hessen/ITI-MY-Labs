@@ -1,0 +1,13 @@
+
+img:hover {
+  transform: scale(1.2);
+
+}
+.card{
+  overflow: hidden;
+
+}
+span{
+  display: block;
+  font-size: 10px;
+}

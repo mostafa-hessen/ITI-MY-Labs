@@ -1,0 +1,14 @@
+<div class="card my-1 m-auto text-center" style="width: 18rem;">
+  <img [src]="prodctcard.image" class="card-img-top" height="100px">
+  <div class="card-body">
+  <a [routerLink]="['card',prodctcard.id]"><p >{{prodctcard.title}} </p></a>
+  <h5 class=" text-info">{{prodctcard.price |currency:"EGP"}}</h5>
+
+    <span [ngStyle]="{'color': prodctcard.rating.count === 0 ? 'red' : 'green' }" >{{prodctcard.rating.count| stock}} </span>
+    <span class="card-text">{{prodctcard.description}}</span>
+    <span>rate :{{prodctcard.rating.rate}}</span>
+    <button class="btn btn-outline-warning" (click)="count(prodctcard)">add to cart </button>
+  </div>
+  
+
+</div>

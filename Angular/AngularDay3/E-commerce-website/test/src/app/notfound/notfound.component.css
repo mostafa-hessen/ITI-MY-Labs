@@ -1,0 +1,10 @@
+.container{
+  width: 80%;
+  height: 500px;
+background-image: url(./../../assets/404-error-page-not-found.jpg);
+background-size: contain;
+background-repeat: no-repeat;
+
+margin-left: 200px;
+
+}

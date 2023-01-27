@@ -1,0 +1,13 @@
+<div class="row border-top border-bottom">
+  <div class="row main align-items-center">
+      <div class="col-2"><img class="img-fluid" [src]="prodctcart.image"></div>
+      <div class="col">
+          <div class="row text-muted">{{prodctcart.title}}</div>
+          <div class="row">{{prodctcart.category}}</div>
+      </div>
+      <div class="col">
+          <a  (click)="decreasecount()">-</a><a href="#" class="border">{{prodctcart.quntity}}</a><a (click)="increasecount()" >+</a>
+      </div>
+      <div class="col">&euro; {{prodctcart.price}}<span class="close">&#10005;</span></div>
+  </div>
+</div>

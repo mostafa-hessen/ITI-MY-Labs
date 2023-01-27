@@ -1,0 +1,40 @@
+
+.navbar .active-link{
+    /* background-color: red !important; */
+    color: rgb(219, 125, 240);
+}
+.nav-link
+{
+    
+    color:#fff;
+}
+.navbar-nav{
+    display: flex;
+    /* justify-items: ;
+     */
+     align-items: center;
+}
+
+.navbar-nav .icon {
+
+     position: relative;
+
+}
+
+.navbar-nav .icon span {
+    /*display: block;
+    */position: absolute;
+    background-color: red;
+    /* padding: 5px; */
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    color: #fff;
+    min-width: 20px;
+    min-height: 20px;
+    font-size: 13px;
+    text-align: center;
+    /* line-height: 9; */
+}

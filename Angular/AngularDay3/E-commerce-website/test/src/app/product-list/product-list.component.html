@@ -1,0 +1,16 @@
+
+
+
+
+<!-- product list -->
+<div class="container-fluid cont my-1 m-auto">
+  <div class="head text-center text-warning py-5 ">
+<h1 class="py-3">Mera Mart</h1>
+  </div>
+<div class="row  my-1 ">
+  <div class="col" *ngFor="let product of products">
+    <app-product-card  [prodctcard]="product"> </app-product-card>
+  </div>
+
+</div>
+</div>

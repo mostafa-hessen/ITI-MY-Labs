@@ -1,0 +1,58 @@
+<div class="row Item" data-id="2">
+    <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+      <!-- Image -->
+      <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+        <img [src]="item.image" class="w-100">
+        <a href="#!">
+          <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+        </a>
+      </div> 
+      <!-- Image -->
+    </div>
+  
+    <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+      <!-- Data -->
+      <p><strong>{{item.name}}</strong></p>
+       
+      <!-- <p>Size: M</p> -->
+  
+    <button (click)=" removeFromcart(item.id)" type="button" class="btn btn-remove   btn-sm me-1 mb-2" data-mdb-toggle="tooltip" title="Remove item" dataremove-id="2">
+        <img src="../../assets/images/icons8-empty-trash-48.png"  width="30"  alt=""/>
+      </button>
+
+      <button  type="button" class="btn btn-danger btn-sm mb-2" data-mdb-toggle="tooltip" title="Move to the wish list">
+        <i class="fas fa-heart"></i>
+      </button>
+      <!-- Data -->
+    </div>
+  
+    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+      <!-- Quantity -->
+      <div class="d-flex mb-4" style="max-width: 300px">
+        <button databtn-id="2" class="btn btn-minus btn-danger px-3 me-2" >
+          <!-- <i class="fas fa-minus"></i> -->
+  -
+        </button>
+  
+        <div class="form-outline">
+          <input min="0" name="quantity" value={{numberOfitem}} data-id="2" type="number" class="form-control NumberOfproduct ">
+          <label class="form-label" for="form1">Quantity</label>
+        </div>
+  
+        <button databtn-id="2" class="btn btn-plus btn-danger px-3 ms-2"  >
+          <!-- <i class="fas fa-plus"></i> -->
+          +
+        </button>
+      </div>
+      <!-- Quantity -->
+  
+  
+      
+      <!-- Price -->
+      <p class="text-start text-md-center">
+        <strong class=" ">EGP<span class="currentPriceOfElements">{{item.price}}</span></strong>
+      </p>
+      <!-- Price -->
+    </div>
+    <hr class="my-4">
+  </div>
