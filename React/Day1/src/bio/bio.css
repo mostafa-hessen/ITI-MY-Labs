@@ -1,0 +1,39 @@
+.head{
+    text-align: center;  color:#F4BC11 ;
+}
+
+.bio .img{
+ 
+    /* // height: 350px; */
+    width: 75%;
+    min-height: 290px;
+    max-height: 250px;
+    border-radius: 7px;
+    margin: auto;
+    /* // object-fit: contain; */
+    overflow: hidden;
+    /* background-color: red; */
+     
+}
+ .bio .img img{
+    width: 100%;
+ }
+
+.content{
+    line-height: 1.5;
+}
+.content p{
+    font-size: 14px;
+    color: gray;
+}
+
+@media (max-width:769px) {
+    .col-content {
+        margin-top: 40px;
+    }
+    .content{
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+}

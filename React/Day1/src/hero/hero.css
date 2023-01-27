@@ -1,0 +1,13 @@
+.bg-image{
+background-image: url('../../public/assets/images/wp4974496.webp');
+min-height: 400px;
+}
+
+ 
+@media (min-width:992px) {
+    
+    .bg-image{
+        height: 600px;
+    }
+    
+}

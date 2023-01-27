@@ -1,0 +1,10 @@
+.navbar {
+    padding: 0;
+    /* color: rgb(22, 17, 17) !important; */
+    /* height: 100px; */
+    color: #fff !important;
+    color: red;
+}
+li a{
+    color: #fff !important;
+}

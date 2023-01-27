@@ -1,0 +1,25 @@
+/* ======= header ======== */
+.img {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    background-image: url("./WhatsApp\ Image\ 2022-12-18\ at\ 8.20.53\ PM\ \(1\).jpeg"); 
+    background-size: cover;
+    background-position: center; 
+  }
+  
+  header input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    /*background-color: rgba(16 18 27 /50%);
+    */background-color: rgba(16 18 27 / 40%) !important;
+    padding: 9px;
+    width: 80%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+  
