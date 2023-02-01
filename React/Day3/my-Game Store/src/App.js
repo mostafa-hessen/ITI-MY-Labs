@@ -9,48 +9,60 @@ import GameCard from "./component/GameCard/GameCard";
 import FilterComp from "./component/FilterComponent/FilterComp";
 import FavoriteStore from "./component/FavouriteStore/FavoriteStore";
 import GameDetails from "./component/GameDetailes/GameDetails";
+import { useDispatch, useSelector } from "react-redux";
+import { getUrlData } from "./redux/actions";
 
- function App() {
-  // const [Game, setGame] = useState([]);
-  // useEffect(() => {
-    // axios
-    //   .get(
-    //     `https://api.rawg.io/api/games?key=4efadf7d35904a19996995e218e37c5a&dates=2019-09-01,2019-09-30&platforms=18&page_size=15&page=5`
-    //   )
+function App() {
+  const dispatch = useDispatch();
+  const GamesData = useSelector((state) => state.Games); // array of Games => 15 array
+  const sraechVal = useSelector((state) => state.value);  
+  let [pageNumber, setpageNumber] = useState(1);
+// let [searched,setSearched]=useState('o')
+  useEffect(() => {
+    dispatch(getUrlData(pageNumber,sraechVal));
+  }, [pageNumber]);
 
-    //   .then((data) => {
-    //     setGame(data.data.results);
-    //   })
-    //   .catch((err) => console.log(err));
-  // }, []);
-  // var ListOFGame = [];
-  // Game.forEach((user, index) => {
-  //   ListOFGame.push(<GameCard img={user.background_image} key={index} />);
-  // });
+
+  useEffect(() => {
+    dispatch(getUrlData(pageNumber,sraechVal));
+  }, [sraechVal]);
+
   return (
     <section className="app text-light">
       <Nav />
-       <GameDetails/>
 
-
-
-      {/* <div className="row">
+      { console.log(sraechVal)}
+      <div className="row">
         <div className="col-lg-3 p-4   d-none  d-lg-block">
-            <FilterComp />
-            <FavoriteStore/>
+          <FilterComp  />
+          <FavoriteStore />
         </div>
 
-        <div className="col-12 colnn-lg-9">
+        <div className="col-12 col-lg-9">
           <Hero />
-          <SearchNav />
-          <div className="row p-3"></div>
+          <SearchNav  />
+
+          <div className="row p-3">
+            {GamesData.map((ele) => {
+              return <GameCard key={ele.id} element={ele} />;
+            })}
+
+         
+            <button className="mt-3 w-30 btn bg-danger" onClick={()=>
+            setpageNumber(pageNumber>1?--pageNumber:1 )
+            }>previouse</button> 
+   
+          <button
+              className="mt-3 btn bg-primary"
+              onClick={() => setpageNumber(++pageNumber)}//1 2 3 4 5
+            >
+              next
+            </button>
+
+          </div>
         </div>
-    
-      </div> */}
-
-
-
-
+      </div>  
     </section>
-  );}
-  export  default App
+  );
+}
+export default App;

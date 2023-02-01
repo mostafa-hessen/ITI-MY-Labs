@@ -2,7 +2,7 @@ import React from "react";
 import "./GameCard.css";
 // import img from "./image 1 copy.jpg";
 function GameCard(props) {
-console.log(props.img);
+// console.log(props.element);
 
   return (
     <div className="col-12 col-sm-6 col-lg-4 mt-3">
@@ -10,14 +10,14 @@ console.log(props.img);
       <div className="Game__container   ">
         {/* ==== Game Img ==== */}
         <div className="img design3">
-          <img src={props.img} alt="portfolio" loding="lazy" />
+          <img src={props.element.background_image} alt="portfolio" loding="lazy" />
         </div>
 
         {/* ==== Game head ==== */}
 
         <div className="Game-head mt-3">
           <div className="StoreIcon"> </div>
-          <h3 className="GameName text-capitalize">playstaion</h3>
+          <h3 className="GameName text-capitalize">{props.element.name}</h3>
         </div>
         <hr/>
 
@@ -46,7 +46,9 @@ console.log(props.img);
           </div>
         </div>
       </div>
+
     </div>
+      // <button className="btn bg-primary">Next</button>
   );
 }
 

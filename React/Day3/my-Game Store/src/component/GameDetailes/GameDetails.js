@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getUrlData } from "../../redux/actions";
 import "./GameDetails.css";
 import GameName from "./GameName/GameName";
 import GameScreenShots from "./gameScreenShots/gameScreenShots";
 import GameStores from "./gameStores/gameStores";
 import ImgCard from "./imgCard/ImgCard";
 // import img from '../image 1 copy.jpg'
-
+// import { useEffect } from "react";
 function GameDetails() {
+  const Games = useSelector((state)=> state)
+  const dispatch = useDispatch()
+  useEffect(() => {
+   dispatch(getUrlData())
+   console.log(Games);
+  }, [])
+  
   let imgUrl = "./image 1 copy.jpg";
   return (
     <>
+    {console.log('Games',Games)}
       <div className="detailes">
         {/* ===== overlay ===== */}
         <div className="overlayGameDet">

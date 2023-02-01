@@ -3,13 +3,13 @@
   width: 6px;
   height: 6px;
 }
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
-}
+} */
 
 ::-webkit-scrollbar-thumb {
   border-radius: 15px;
