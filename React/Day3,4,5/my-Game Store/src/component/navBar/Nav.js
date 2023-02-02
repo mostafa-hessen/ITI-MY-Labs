@@ -1,6 +1,7 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Nav.css'
 function Nav() {
+  const [count, setcount] = useState(0)
   return (
     <div className="row">
     {/* <!-- =====header======== --> */}
@@ -19,6 +20,11 @@ function Nav() {
             {/* <button className="btn btn-primary rounded-5 py-1 m-2 font-weight-bold text-capitalize">
               creat
             </button> */}
+           <div className='favourite'>
+           <span>{count}</span>
+            <i className="fa-regular text-danger fa-heart"></i>
+              
+           </div>
             <div className="img rounded-circle"></div>
           </div>
         </div>

@@ -57,7 +57,7 @@ const ClickedDetailes=(e)=>{
 
             {/* {console.log(props.element.ratings[0]['count'])} */}
           </div>
-          <div className="favourit icons">
+          <div className="favourit icons" onClick={()=>console.log(props.element)}>
             {/* <i className="fa-solid fa-heart"></i> */}
             <i className="fa-regular text-danger fa-heart"></i>
             12
