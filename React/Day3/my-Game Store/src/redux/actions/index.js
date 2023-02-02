@@ -3,22 +3,47 @@
 // import axios from "axios";
 import { axiosInstance } from "../../API/API";//https://api.rawg.io/api/
 
-export const getUrlData = (eNum,searched) =>   (dispatch) => {
+ 
+export const getUrlData = (eNum,searched,filter) =>   (dispatch) => {
    return   axiosInstance.get(
-      searched=='' ?  `games?key=4efadf7d35904a19996995e218e37c5a&dates=2020-09-01,2022-09-30&page_size=15&page=${eNum}`:
-      `games?key=4efadf7d35904a19996995e218e37c5a&dates=2020-09-01,2022-09-30&page_size=15&search=${searched}`
+   
+      // `games?key=4efadf7d35904a19996995e218e37c5a&dates=2020-09-01,2022-09-30&page_size=25&search=${searched}&page=${eNum}&parent_platforms=${7}`
+       `games?key=4efadf7d35904a19996995e218e37c5a&dates=2020-09-01,2022-09-30&page_size=25&page=${eNum}&parent_platforms=${filter}&search=${searched}`
+      
+      // `games?key=4efadf7d35904a19996995e218e37c5a&dates=2020-09-01,2022-09-30&page_size=25&search=${searched}&page=${eNum}&parent_platforms=${7}`
+
       )
+      // &platforms={filter}
       .then((data) => {
-         dispatch({ type: "GET-DATA", payload: data.data.results });
+         dispatch({ type: "GET-DATA", payload: data.data.results ,data:data});
       });
   };
 
 
+
+
+ 
   export const SearchedValue = (e) =>   (dispatch) => {
     
          dispatch({ type: "SEARCH-VALUE", payload:e});
        
   };
+
+
+  export const FilterValue = (e) =>   (dispatch) => {
+    
+   dispatch({ type: "Filter-VALUE", payload:e});
+ 
+};
+
+
+
+
+export const GameDetaileFunc = (e) =>   (dispatch) => {
+    
+   dispatch({ type: "GET-Detailes", payload:e});
+ 
+};
 //   export const GetSearched = (searched) =>   (dispatch) => {
 //    return   axiosInstance.get(
 //         `games?key=4efadf7d35904a19996995e218e37c5a&dates=2020-09-01,2022-09-30&page_size=15&search=${searched}`

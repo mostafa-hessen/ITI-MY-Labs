@@ -2,13 +2,32 @@ const intialState = {
   Games: [],
 };
 
-export default function GetDataReducer (state = intialState, action)  {
-  console.log("=>",action.payload);
+export  function GetDataReducer (state = intialState, action)  {
+  // console.log("=>",action.payload);
   switch (action.type) {
     case "GET-DATA":
-      return { ...state, Games: action.payload };
+      return { ...state, Games: action.payload,data:action.data };
       case "SEARCH-VALUE":
-        return { ...state, value: action.payload };
+        return { ...state, searchValue: action.payload };
+      case "Filter-VALUE":
+        return { ...state, filterValue: action.payload };
+
+    default:
+      return state;
+  }
+};
+
+const intialState1 = {
+  GameDetailes:{}
+};
+
+
+export  function GetElementDetailes (state = intialState1, action)  {
+  // console.log("=>",action.payload);
+  switch (action.type) {
+    case "GET-Detailes":
+      return { ...state, GameDetailes: action.payload };
+      
     default:
       return state;
   }

@@ -28,3 +28,9 @@
     border-bottom: 1px solid rgba(154, 154, 154, 0.536);
 
 }
+
+.Favourite__container     .list-group  h6{
+
+    margin-bottom: 0 !important;
+
+}

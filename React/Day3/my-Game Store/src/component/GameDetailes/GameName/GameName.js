@@ -1,9 +1,9 @@
 import React from 'react'
 
-function GameName() {
+function GameName(props) {
   return (
     <div className='text-uppercase'>
-        <h2>fifa 15</h2>
+        <h2>{props.name?props.name:'place holder'}</h2>
     </div>
   )
 }

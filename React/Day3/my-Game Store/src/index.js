@@ -8,10 +8,11 @@ import { applyMiddleware, createStore } from 'redux';
 // import  {Reduceres}  from './redux/reducers/reducerGetUrl';
 import thunk from 'redux-thunk';
 import GetDataReducer from './redux/reducers/reducerGetUrl';
+import reducers from './redux/reducers/reducers';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
- const store = createStore(GetDataReducer,applyMiddleware(thunk))
+ const store = createStore(reducers,applyMiddleware(thunk))
 // const store = createStore(GetDataReducer,applyMiddleware(thunk))
 
 

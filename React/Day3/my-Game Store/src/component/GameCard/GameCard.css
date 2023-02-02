@@ -15,9 +15,22 @@
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
 }
-  
-  
+  .text-gold{
+    color:gold
+  }
 
+  .text-darktheme{
+color: #4a4a8a;
+  }
+
+  .iconLink{
+    text-align: right;
+
+  }
+  .myLink{
+    text-decoration: none;
+  }
+ 
  
   .Game__container .img {
     width: 100%;
@@ -40,6 +53,7 @@
 }
 .Game__container   .icons{
     padding-left: 4px;
+    cursor: pointer;
   }
 
 .Game__container   .icons i{
@@ -60,7 +74,16 @@
     -o-transition: 3.3s all linear;
   }
   
- 
+ .btn-orange{
+  background-color: #fd9065 !important;
+  color:#FFF
+ }
+
+ .btn-gold{
+  background-color: gold !important;
+  color:black;
+  font-weight: bold;
+ }
 @media (min-width:992px) {
   .Game__container .img {
     min-height: 200px;
