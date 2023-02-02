@@ -1,5 +1,5 @@
 import "./App.css";
-
+// import { CDBModal } from 'cdbreact';
 import Nav from "./component/navBar/Nav";
 import "bootstrap/dist/css/bootstrap.min.css";
 import GameDetails from "./component/GameDetailes/GameDetails";
@@ -10,6 +10,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
+// import Modal from './test'
+// import { Modal } from "bootstrap";
 function App() {
   return (
     <section className="app text-light">
@@ -23,6 +25,8 @@ function App() {
           <Route path="/detailes">
             <GameDetails />
           </Route>
+
+          
            
         </Switch>
       </BrowserRouter>
