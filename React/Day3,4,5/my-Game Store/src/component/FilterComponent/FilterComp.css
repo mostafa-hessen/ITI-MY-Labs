@@ -28,3 +28,7 @@
     border-bottom: 1px solid rgba(154, 154, 154, 0.536);
 
 }
+
+.Filter__container    h6,.Filter__container    label{
+    color:#ebdcdc
+}

@@ -20,11 +20,11 @@ function Nav() {
             {/* <button className="btn btn-primary rounded-5 py-1 m-2 font-weight-bold text-capitalize">
               creat
             </button> */}
-           <div className='favourite'>
+           {/* <div className='favourite'>
            <span>{count}</span>
             <i className="fa-regular text-danger fa-heart"></i>
               
-           </div>
+           </div> */}
             <div className="img rounded-circle"></div>
           </div>
         </div>

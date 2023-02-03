@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from "react";
-// import axios from "axios";
+import './Home.css'  ;
 import "bootstrap/dist/css/bootstrap.min.css";
 import Hero from "../hero/Hero";
 import SearchNav from "../searchNav/SearchNav";
@@ -45,16 +45,18 @@ function Home() {
         })}
 
      
-        <button className="mt-3 w-30 btn bg-danger" onClick={()=>
+     <div className='text-center  mypagination  '>
+     <button className="mt-3 p-2 text-white text-capitalize btn me-2 bg-danger" onClick={()=>
         setpageNumber(pageNumber>1?--pageNumber:1 )
         }>previouse</button> 
 
       <button
-          className="mt-3 btn bg-primary"
+          className="mt-3 btn bg-primary text-white text-capitalize p-2 "
           onClick={() => setpageNumber(++pageNumber)}//1 2 3 4 5
         >
           next
         </button>
+     </div>
 
       </div>
     </div>

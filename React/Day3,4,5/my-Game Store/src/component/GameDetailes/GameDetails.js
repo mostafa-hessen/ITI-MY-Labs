@@ -51,7 +51,7 @@ function GameDetails() {
                   <GameScreenShots screenShotes={Game.short_screenshots} />
               
                 {/* ===== avivable store */}
-                <GameStores />
+                {/* <GameStores /> */}
               </div>
             </div>
           </div>
