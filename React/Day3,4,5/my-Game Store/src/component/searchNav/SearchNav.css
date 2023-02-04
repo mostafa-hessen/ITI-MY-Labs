@@ -54,9 +54,13 @@ border:none
     color: #4a4b8c;
 }
 
-@media (max-width:480px) {
+@media (max-width:568px) {
 .filterIcon{
     margin-left: 2px;
+}
+
+.myNavSearchCild{
+justify-content: space-between !important;
 }
     
 }
@@ -67,5 +71,12 @@ border:none
     margin-left: 0px;
 
     }
+
+    .myNavSearchCild{
+
+        flex-direction: column;
+        justify-content: space-around;
+        /* justify-content: space-between !important; */
+        }
         
     }

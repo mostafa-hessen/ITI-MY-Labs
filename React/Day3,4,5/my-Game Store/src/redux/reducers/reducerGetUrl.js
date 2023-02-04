@@ -11,7 +11,6 @@ export  function GetDataReducer (state = intialState, action)  {
         return { ...state, searchValue: action.payload };
       case "Filter-VALUE":
         return { ...state, filterValue: action.payload };
-
     default:
       return state;
   }
@@ -32,3 +31,30 @@ export  function GetElementDetailes (state = intialState1, action)  {
       return state;
   }
 };
+
+const intialState2 = {
+  FavouriteGames:{}
+};
+
+export  function GetFavourit (state = intialState2, action)  {
+  // console.log("=>",action.payload);
+  switch (action.type) {
+    case "GET-FromLocalSorage":
+      return { ...state, favoriteGames: action.payload };
+      
+    default:
+      return state;
+  }
+};
+
+
+// export  function removeFromFavourite (state = intialState2, action)  {
+//   // console.log("=>",action.payload);
+//   switch (action.type) {
+//     case "remove-FromLocalSorage":
+//       return { state.filter };
+      
+//     default:
+//       return state;
+//   }
+// };

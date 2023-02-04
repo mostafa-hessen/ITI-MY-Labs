@@ -10,7 +10,8 @@
     -o-border-radius: 30px;
     background-size: cover;
     background-repeat: no-repeat;
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow: initial !important;
     position: relative;
     animation-name: ChangeBackground;
     animation-duration: 15s;
@@ -58,7 +59,8 @@
 @media (min-width:992px) {
 .hero    {
     /* width: 65%; */
-    height: 320px;
+   min-height: 320px;
+    overflow: initial !important;
 }
    
 .hero    img{
@@ -72,6 +74,7 @@
     position: absolute;
     /* background-color: red; */
     background-image:  linear-gradient(0deg, #01030e 0%, #000000db 25%, #0001069e 45%, #00000075 60%,#0e00006a 100%);
+    background-image: linear-gradient(0deg, rgb(39, 38, 78) 10%, rgb(39, 38, 78) 25%, rgba(39, 38, 78, 0.867) 44%, rgba(39, 38, 78, 0.655) 60%);
     top: 0;
     left: 0;
     width: 100%;

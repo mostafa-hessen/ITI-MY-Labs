@@ -33,8 +33,8 @@ function SearchNav() {
     p-2
     "
     >
-      {console.log(filterVal)}
-      <div className="row justify-content-center align-items-center">
+      {/* {console.log(filterVal)} */}
+      <div className="row myNavSearchCild justify-content-center align-items-center">
         <div className="col-2 col-sm-4 col-lg-6">
           <h3 className="text-capitalize">
             {filterVal == 1
@@ -61,7 +61,7 @@ function SearchNav() {
 
         <div className=" col-2 col-sm-2 d-lg-none">
           <div className="filterIcon" onClick={() => setModalShow(true)}>
-            <i class="fas fa-th-large"></i>
+            <i className="fas fa-th-large"></i>
           </div>
         </div>
 

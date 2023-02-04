@@ -13,6 +13,8 @@ function FilterComp() {
    dispatch(FilterValue(Filtervalue))
      
   }, [Filtervalue])
+
+  
   return (
     <div className="Filter__container text-capitalize ">
       <h6 className="mb-4">filter</h6>

@@ -10,13 +10,17 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import FavouriteGame from "./component/FavouriteGamePage/FavouriteGame";
+import SkeltonEffect from "./component/SkeltonEffect/SkeltonEffect";
 // import Modal from './test'
 // import { Modal } from "bootstrap";
 function App() {
   return (
     <section className="app text-light">
-      <Nav />
       <BrowserRouter>
+      <Nav />
+
+
 
       <Switch>
           <Route exact path="/">
@@ -24,6 +28,10 @@ function App() {
           </Route>
           <Route path="/detailes">
             <GameDetails />
+          </Route>
+
+          <Route path="/favouritesGames">
+            <FavouriteGame />
           </Route>
 
           

@@ -1,19 +1,38 @@
 .Game__container {
-    padding: 15px;
-    /*min-height: 270px;
-    */min-height: fit-content;
-    background-color: #35356b;
-    border-radius: 30px;
-    transition: all .56s ease-in-out;
-    -webkit-transition: all .56s ease-in-out;
-    -moz-transition: all .56s ease-in-out;
-    -ms-transition: all .56s ease-in-out;
-    -o-transition: all .56s ease-in-out;
-    position: relative;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
+        padding: 15px;
+        /*min-height: 270px;
+        */min-height: fit-content;
+        background-color: #35356b;
+        border-radius: 30px;
+        transition: all .56s ease-in-out;
+        -webkit-transition: all 1s  ease-in-out ;
+        -moz-transition: all 1s  ease-in-out ;
+        -ms-transition: all 1s  ease-in-out ;
+        -o-transition: all 1s  ease-in-out ;
+        position: relative;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        /* animation-name: skotlite;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        transition: all 1s  ease-in-out ; */
+        /* animation-timing-function: linear; */
+
+}
+
+
+@keyframes skotlite {
+  to{
+    opacity: 0.5;
+    transition: all 1s  ease-in-out ;
+    -webkit-transition: all 1s  ease-in-out ;
+    -moz-transition: all 1s  ease-in-out ;
+    -ms-transition: all 1s  ease-in-out ;
+    -o-transition: all 1s  ease-in-out ;
+}
+  
 }
   .text-gold{
     color:gold
@@ -25,6 +44,8 @@ color: #4a4a8a;
 
   .iconLink{
     text-align: right;
+    margin-left: auto;
+    margin-right: 5px;
 
   }
   .myLink{
@@ -78,7 +99,23 @@ color: #4a4a8a;
   background-color: #fd9065 !important;
   color:#FFF
  }
+/* .StoreIcon{
+  width: 100px;
+  background-color: red;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+} */
 
+
+/* .Game__container .myStoreImg{
+  object-fit: cover;
+  object-position: top;
+} */
  .btn-gold{
   background-color: gold !important;
   color:black;
