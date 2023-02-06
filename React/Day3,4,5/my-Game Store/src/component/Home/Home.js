@@ -29,11 +29,9 @@ function Home() {
       setisLoading(false);
     }, 2000);
     dispatch(getUrlData(pageNumber, search, filter));
-  }, [pageNumber, filter, search]);
-
-  // useEffect(() => {
-  //   dispatch(getUrlData(pageNumber,sraechVal,filterVal ));
-  // }, [sraechVal]);
+  }, [pageNumber]);
+  // [pageNumber, filter, search]);
+ 
 
   useEffect(() => {
     setisLoading(true);
@@ -102,7 +100,6 @@ function Home() {
         {}
         <Hero />
         <SearchNav />
-        {/* {console.log(filterVal)} */}
         <div className="row p-3">
           {isloading
             ? GamesData.map((ele) => {

@@ -10,14 +10,13 @@ function SkeltonEffect() {
     <div className=" Skelton__container  ">
       {/* ==== Game Img ==== */}
       <div className="img design3">
-     
       </div>
 
       {/* ==== Game head ==== */}
 
       <div className="skelton-head mt-3 d-flex align-items-center">
         <div className="StoreIcon">
-    
+
         </div>
         <h3 className="skeltonName text-capitalize"></h3>
       </div>

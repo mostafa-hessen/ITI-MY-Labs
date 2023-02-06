@@ -1,7 +1,6 @@
 .Skelton__container {
   padding: 15px;
-  /*min-height: 270px;
-  */min-height: fit-content;
+  min-height: fit-content;
   background-color: #35356b;
   border-radius: 30px;
   transition: all 1s ease-in-out;
@@ -17,13 +16,12 @@
   animation-name: skotlite;
   animation-duration: 1s;
   animation-iteration-count: infinite;
-  /*animation-fill-mode:;
-  */animation-direction: alternate;
+  animation-direction: alternate;
   transition: all 1s  ease-in-out ;
 }
 
 @keyframes skotlite {
-  to {
+   to {
     opacity: 0.6;
   }
 }
@@ -39,7 +37,6 @@
         animation-duration: .8s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
-     
 }
     
 .Skelton__container  .img {
@@ -54,9 +51,6 @@
   -o-border-radius: 35px;
   cursor: pointer;
   z-index: 1;
-
-
-  /* background-color: rgb(131, 160, 93) !important; */
 }
 
 .Skelton__container .StoreIcon {
@@ -73,10 +67,6 @@
   height: 40px;
   margin: 0;
   margin-left: 16px;
-
-
-
-
 }
 .Skelton__container .icons {
   width: 25px;
