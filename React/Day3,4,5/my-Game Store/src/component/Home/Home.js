@@ -39,8 +39,25 @@ function Home() {
     setTimeout(() => {
       setisLoading(false);
     }, 2000);
+
+
+
+    
     dispatch(getUrlData(pageNumber, search, filterVal));
   }, [filterVal]);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   useEffect(() => {
     setisLoading(true);

@@ -1,0 +1,6 @@
+1- create project
+2- npm init 
+3- npm install --save-dev mocha
+4- create (folder or file) -->  test
+5- in package.json ==> "test": "mocha"
+6- to run test --> npm test
