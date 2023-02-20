@@ -77,7 +77,7 @@ function Home() {
     );
   }, []);
 
-  const [favorite, setfavorite] = useState([]);
+  const [favorite, setfavorite] = useState(['kjkm']);
   const [alert, setalert] = useState("");
   // let alert='kjwidjqiwojiojciowoejfdiowejfioejfioqej';
   let setToLocalStorage = (ele) => {
@@ -86,25 +86,34 @@ function Home() {
 
   const favoriteFunc = (element) => {
     // let i =  favorite!=[]? [...favorite]:favorite
-    let newItem = [...favorite];
+    console.log(favorite);
+    let newItem = 
+    favorite? [...favorite]:[]
+    console.log(newItem);
 
-    favorite.find((ele) => ele.id == element.id)
+    setfavorite(newItem);
+
+    // if(favorite)
+    // { 
+      favorite!=null? favorite.find((ele) => ele.id == element.id)
       ? setalert(
           <div class="alert alert-danger" role="alert">
             A simple danger alert—check it out!
           </div>
         )
-      : newItem.push(element);
+      : newItem.push(element):newItem.push(element)
 
-    newItem.find((ele) => console.log(ele));
+    // newItem.find((ele) => console.log(ele));
 
-    setfavorite(newItem);
+    // setfavorite(newItem);
 
     setToLocalStorage(newItem);
 
     dispatch(
       getFromLocalStorage(JSON.parse(localStorage.getItem("FavouriteItems")))
     );
+  // }
+ 
   };
   return (
     <div className="row">
